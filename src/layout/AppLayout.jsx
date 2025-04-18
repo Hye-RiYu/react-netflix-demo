@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Container, Nav, Navbar, Form } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
-import "./AppLayout.style.css";
 
 const AppLayout = () => {
   return (
