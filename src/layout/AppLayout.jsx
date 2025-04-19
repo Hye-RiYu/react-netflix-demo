@@ -21,18 +21,11 @@ const AppLayout = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">
-                <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-                  Home
-                </Link>
+              <Nav.Link href="/" style={{ color: "white" }}>
+                Home
               </Nav.Link>
-              <Nav.Link href="#action2">
-                <Link
-                  to="/movies"
-                  style={{ color: "white", textDecoration: "none" }}
-                >
-                  Movies
-                </Link>
+              <Nav.Link href="/movies" style={{ color: "white" }}>
+                Movies
               </Nav.Link>
             </Nav>
             <Form className="d-flex">
