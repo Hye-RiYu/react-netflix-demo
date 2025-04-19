@@ -12,7 +12,7 @@ import UpcomingMovie from "./components/UpcomingMovie/UpcomingMovie";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="homepage-wrap">
       <Banner />
       <PopularMovieSlide />
       <TopRatedMovie />

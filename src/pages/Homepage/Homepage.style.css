@@ -1,7 +1,15 @@
-.container {
-  margin-bottom: 2rem;
+.homepage-wrap {
+  padding-bottom: 6rem;
 }
 
-.container:last-child {
-  margin-bottom: 6rem;
+@media (max-width: 1024px) {
+  .homepage-wrap {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 464px) {
+  .homepage-wrap {
+    padding-bottom: 4rem;
+  }
 }
