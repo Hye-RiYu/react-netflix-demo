@@ -2,6 +2,8 @@ import React from "react";
 import Banner from "./components/Banner/Banner";
 import PopularMovieSlide from "./components/PopularMovieSlide/PopularMovieSlide";
 import "./Homepage.style.css";
+import TopRatedMovie from "./components/TopRatedMovie/TopRatedMovie";
+import UpcomingMovie from "./components/UpcomingMovie/UpcomingMovie";
 
 // 1. 배너 => popular 영화를 들고와서 첫번째 아이템을 보여주자
 // 2. popular movie
@@ -10,9 +12,11 @@ import "./Homepage.style.css";
 
 const Homepage = () => {
   return (
-    <div className="yama">
+    <div>
       <Banner />
       <PopularMovieSlide />
+      <TopRatedMovie />
+      <UpcomingMovie />
     </div>
   );
 };
