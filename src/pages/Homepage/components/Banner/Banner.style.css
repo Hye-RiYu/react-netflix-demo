@@ -26,3 +26,25 @@
 /* .banner-text-area * {
   z-index: 2;
 } */
+
+@media (max-width: 767px) {
+  .banner-text-area {
+    width: 80%;
+    align-items: steart;
+    justify-content: end;
+  }
+
+  .banner-text-area * {
+    z-index: 2;
+    opacity: 0.8;
+  }
+
+  .banner-text-area-title {
+    font-size: 1.4rem;
+  }
+
+  .banner-text-area-overview {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+}
