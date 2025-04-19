@@ -32,9 +32,8 @@
   .banner-text-area {
     width: 40%;
     align-items: start;
-    justify-content: center;
     padding-top: 5rem;
-    padding-left: 1rem;
+    margin-left: 2.2rem;
   }
 
   .banner-text-area-title {
@@ -55,6 +54,7 @@
     padding-top: 0;
     padding-left: 0;
     padding-bottom: 0.4rem;
+    margin-left: 1rem;
   }
 
   .banner-text-area * {
