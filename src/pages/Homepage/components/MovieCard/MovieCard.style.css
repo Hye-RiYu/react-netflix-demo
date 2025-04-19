@@ -1,0 +1,82 @@
+.movie-card {
+  width: 240px;
+  height: 330px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.movie-card:hover {
+  transform: scale(1.1) translateZ(20px);
+  z-index: 2;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 41, 41, 0.9);
+  opacity: 0;
+  transition: all 1s;
+  color: white;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  padding: 2.4rem 1rem 0;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.movie-info {
+  margin-top: 2.6rem;
+}
+
+.movie-info div {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0.1rem;
+}
+
+.overlay h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  margin-right: 0.4rem;
+}
+
+.svg-inline--fa {
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 1024px) {
+  .movie-card {
+    width: 95%;
+    height: 300px;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .movie-card:hover {
+    transform: none;
+  }
+
+  .overlay {
+    height: 1px;
+    margin-top: 10px;
+  }
+
+  .overlay:hover {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 464px) {
+  .movie-card {
+    width: 95%;
+    height: 180px;
+  }
+}
