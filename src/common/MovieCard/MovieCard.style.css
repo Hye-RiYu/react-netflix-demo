@@ -26,12 +26,23 @@
   border-radius: 0.8rem 0.8rem 0 0;
 }
 
+.overlay h1 {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: keep-all;
+}
+
 .overlay:hover {
   opacity: 1;
 }
 
 .movie-info {
-  margin-top: 2.6rem;
+  margin-top: 0.6rem;
 }
 
 .movie-info div {
@@ -58,6 +69,7 @@
     width: 95%;
     height: 300px;
     border-radius: 0.5rem 0.5rem 0 0;
+    background-position: top;
   }
 
   .movie-card:hover {
