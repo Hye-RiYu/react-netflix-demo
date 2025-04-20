@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import { Alert, Container, Row, Col } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
@@ -25,12 +25,22 @@ const MoviesPage = () => {
     page,
   });
 
+  useEffect(() => {
+    setPage(1);
+  }, [keyword]);
+
   // const handlePageClick = ({ selected }) => {
   //   setPage(selected + 1);
   // };
 
   if (isLoading) return <h1>Loading...</h1>;
   if (isError) return <Alert variant="danger">{error.message}</Alert>;
+
+  const noResultsMessage = (
+    <Alert variant="danger" className="text-center">
+      검색 결과가 없습니다. 다른 키워드로 다시 검색해보세요.
+    </Alert>
+  );
 
   return (
     <Container>
@@ -39,6 +49,8 @@ const MoviesPage = () => {
           필터
         </Col>
         <Col lg={8} xs={12}>
+          {data?.results.length === 0 && noResultsMessage}
+
           <Row className="g-4 mb-4">
             {data?.results.map((movie, index) => (
               <Col key={index} lg={4} xs={6}>
