@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,19 +12,25 @@ import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
+  const navigate = useNavigate();
 
   const showGenre = (genreIdList) => {
     if (!genreData) return [];
     const genreNameList = genreIdList.map((id) => {
       const genreObj = genreData.find((genre) => genre.id === id);
-      return genreObj.name;
+      return genreObj?.name;
     });
 
     return genreNameList;
   };
 
+  const handleClick = () => {
+    navigate(`/movies/${movie.id}`);
+  };
+
   return (
     <div
+      onClick={handleClick}
       style={{
         backgroundImage:
           "url(" +

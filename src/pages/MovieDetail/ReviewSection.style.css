@@ -1,0 +1,58 @@
+/* 리뷰 컨테이너 */
+.review-container {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* 리뷰 항목 */
+.review-item {
+  border-bottom: 1px solid #444;
+  padding: 15px 0;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+/* 작성자 이름 */
+.review-author {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 리뷰 내용 */
+.review-content {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* 더보기 버튼 */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: bold;
+  cursor: pointer;
+}
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
+/* 로딩 / 리뷰 없음 메시지 공통 */
+.review-message {
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .review-message {
+    margin-top: 0;
+  }
+}
