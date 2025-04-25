@@ -1,0 +1,49 @@
+.genre-filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.genre-filter-wrapper button {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .genre-filter-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .genre-filter-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .genre-filter-wrapper button {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .d-none.d-md-block {
+    display: none;
+  }
+
+  .d-block.d-md-none {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .genre-filter-wrapper {
+    gap: 1rem;
+  }
+
+  .genre-filter-wrapper button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
